@@ -1,0 +1,12 @@
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\bin\Debug\Libreria.exe.config
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\bin\Debug\Libreria.exe
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\bin\Debug\Libreria.pdb
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Properties.Resources.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.csproj.GenerateResource.Cache
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.exe
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.pdb
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.csprojResolveAssemblyReference.cache
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmLogin.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\bin\Debug\MySql.Data.dll
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\bin\Debug\MySql.Data.xml
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmPrincipal.resources
