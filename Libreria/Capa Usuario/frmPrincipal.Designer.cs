@@ -107,7 +107,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImage = global::Libreria.Properties.Resources.no_se_dice_ler__es_leer_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(644, 406);
+            this.ClientSize = new System.Drawing.Size(647, 410);
             this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnAutores);
             this.Controls.Add(this.btnVentas);

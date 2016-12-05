@@ -19,9 +19,9 @@ namespace Libreria.Capa_Usuario
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "Arturo Barajas")
+            if (txtUsuario.Text == "A")
             {
-                if (txtContraseña.Text == "arturo123")
+                if (txtContraseña.Text == "123")
                 {
                     MessageBox.Show("Bienvenido");
                     frmPrincipal form = new frmPrincipal();

@@ -214,5 +214,10 @@ namespace Libreria.Capa_Negocios
             cnConexion.Close();
             return cli;
         }
+
+        public static implicit operator clsDatosAutores(clsDatosTitulos v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

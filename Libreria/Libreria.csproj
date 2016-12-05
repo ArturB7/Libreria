@@ -33,12 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -100,7 +103,9 @@
     <Compile Include="Capa Usuario\frmEditarTitulos.Designer.cs">
       <DependentUpon>frmEditarTitulos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Capa Usuario\frmEditoriales.cs" />
+    <Compile Include="Capa Usuario\frmEditoriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Capa Usuario\frmEditoriales.Designer.cs">
       <DependentUpon>frmEditoriales.cs</DependentUpon>
     </Compile>
@@ -116,7 +121,21 @@
     <Compile Include="Capa Usuario\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Capa Usuario\frmTitulos.cs" />
+    <Compile Include="Capa Usuario\frmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa Usuario\frmReporte.Designer.cs">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capa Usuario\frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa Usuario\frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capa Usuario\frmTitulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Capa Usuario\frmTitulos.Designer.cs">
       <DependentUpon>frmTitulos.cs</DependentUpon>
     </Compile>
@@ -126,6 +145,8 @@
     <Compile Include="Capa Usuario\frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Capa Datos\eTicket.cs" />
+    <Compile Include="Capa Datos\eTitulo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,11 +158,23 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Capa Usuario\frmAgregarAutores.resx">
+      <DependentUpon>frmAgregarAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa Usuario\frmAgregarEditorial.resx">
+      <DependentUpon>frmAgregarEditorial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Capa Usuario\frmAgregarTitulo.resx">
       <DependentUpon>frmAgregarTitulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Capa Usuario\frmAutores.resx">
       <DependentUpon>frmAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa Usuario\frmEditarAutores.resx">
+      <DependentUpon>frmEditarAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa Usuario\frmEditarEditorial.resx">
+      <DependentUpon>frmEditarEditorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Capa Usuario\frmEditarTitulos.resx">
       <DependentUpon>frmEditarTitulos.cs</DependentUpon>
@@ -154,6 +187,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Capa Usuario\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa Usuario\frmReporte.resx">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa Usuario\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Capa Usuario\frmTitulos.resx">
       <DependentUpon>frmTitulos.cs</DependentUpon>
@@ -179,6 +218,31 @@
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\Libreria.csproj.GenerateResource.Cache" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Datos.clsAutores.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Datos.clsEditores.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Datos.clsTitulos.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Datos.clsVentas.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Negocios.clsDatosAutores.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Negocios.clsDatosEditores.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Negocios.clsDatosTitulos.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Negocios.clsDatosVentas.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmAgregarAutores.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmAgregarEditorial.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmAgregarTitulo.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmAutores.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmEditarAutores.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmEditarEditorial.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmEditarTitulos.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmEditoriales.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmLogin.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmPrincipal.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmReportes.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmTitulos.datasource" />
+    <None Include="Properties\DataSources\Libreria.Capa_Usuario.frmVentas.datasource" />
+    <None Include="Properties\DataSources\Libreria.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Libreria.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -203,6 +267,10 @@
     <Content Include="obj\Debug\Libreria.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Libreria.exe" />
     <Content Include="obj\Debug\Libreria.pdb" />
+    <None Include="Resources\editar-icono-9796-64.png" />
+    <None Include="Resources\editar-borrar-icono-5828-64.png" />
+    <None Include="Resources\agregar-editar-icono-6607-64.png" />
+    <None Include="Resources\closer-1297401_960_720.png" />
     <None Include="Resources\no se dice ler, es leer! %281%29.jpg" />
     <None Include="Resources\no se dice ler, es leer!.jpg" />
   </ItemGroup>

@@ -63,6 +63,46 @@ namespace Libreria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar_editar_icono_6607_64 {
+            get {
+                object obj = ResourceManager.GetObject("agregar-editar-icono-6607-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap closer_1297401_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("closer-1297401_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editar_borrar_icono_5828_64 {
+            get {
+                object obj = ResourceManager.GetObject("editar-borrar-icono-5828-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editar_icono_9796_64 {
+            get {
+                object obj = ResourceManager.GetObject("editar-icono-9796-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap no_se_dice_ler__es_leer_ {
             get {
                 object obj = ResourceManager.GetObject("no se dice ler, es leer!", resourceCulture);

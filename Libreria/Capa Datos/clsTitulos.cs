@@ -15,8 +15,10 @@ namespace Libreria.Capa_Datos
         private string tGenero;
         private decimal tPrecio;
         private string tNotas;
-        private DateTime tFecha;
+        private string tFecha;
         private string tRegalias;
+        private int tCantidad;
+
 
         public static MySqlConnection ObtenerConexion()
         {
@@ -35,6 +37,19 @@ namespace Libreria.Capa_Datos
             set
             {
                 tTituloId = value;
+            }
+
+        }
+
+        public int Cantidad
+        {
+            get
+            {
+                return tCantidad;
+            }
+            set
+            {
+                tCantidad = value;
             }
 
         }
@@ -87,7 +102,7 @@ namespace Libreria.Capa_Datos
             }
         }
 
-        public DateTime Fecha
+        public String Fecha
         {
             get
             {

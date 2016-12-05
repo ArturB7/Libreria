@@ -10,3 +10,17 @@ C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria
 C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\bin\Debug\MySql.Data.dll
 C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\bin\Debug\MySql.Data.xml
 C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmPrincipal.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmAgregarTitulo.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmAutores.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmEditarTitulos.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmTitulos.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmVentas.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmEditoriales.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmReportes.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmAgregarAutores.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmAgregarEditorial.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmEditarAutores.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmEditarEditorial.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\obj\Debug\Libreria.Capa_Usuario.frmReporte.resources
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\azb_9\OneDrive\documentos\visual studio 2015\Projects\Libreria\Libreria\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll

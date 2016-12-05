@@ -16,5 +16,15 @@ namespace Libreria.Capa_Usuario
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmEditarEditorial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

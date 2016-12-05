@@ -9,7 +9,7 @@ using System.Data;
 
 namespace Libreria.Capa_Negocios
 {
-    class clsDatosTitulos
+     class clsDatosTitulos
     {
         private MySqlConnection cnConexion = new MySqlConnection();
 
@@ -70,7 +70,7 @@ namespace Libreria.Capa_Negocios
                 objTitulo.Genero = dr.GetString("Genero");
                 objTitulo.Precio = dr.GetDecimal("Precio");
                 objTitulo.Notas = dr.GetString("Notas");
-                objTitulo.Fecha = dr.GetDateTime("Fecha Publicacion");
+                objTitulo.Fecha = dr.GetString("Fecha Publicacion");
                 objTitulo.Reagalias = dr.GetString("Regalias");
 
 
@@ -96,11 +96,10 @@ namespace Libreria.Capa_Negocios
             cm.Parameters.AddWithValue("@genero", objTitulo.Genero);
             cm.Parameters.AddWithValue("@precio", objTitulo.Precio);
             cm.Parameters.AddWithValue("@notas", objTitulo.Notas);
-            cm.Parameters.AddWithValue("@fecha", objTitulo.Fecha);
             cm.Parameters.AddWithValue("@regalias", objTitulo.Reagalias);
 
 
-            sql = "UPDATE titulos SET Tituloid = @tituloid, Nombre = @nombre, Genero = @genero, precio = @precio, Notas = @notas, FechaPubicacion = @fecha, Regalias = @regalias";
+            sql = "UPDATE titulos SET  Nombre = @nombre, Genero = @genero, precio = @precio, Notas = @notas, Regalias = @regalias where Tituloid=@tituloid";
             cm.CommandText = sql;
             cm.CommandType = CommandType.Text;
             cm.Connection = cnConexion;
@@ -144,7 +143,7 @@ namespace Libreria.Capa_Negocios
                 objTitulo.Genero = dr.GetString("Genero");
                 objTitulo.Precio = dr.GetDecimal("Precio");
                 objTitulo.Notas = dr.GetString("Notas");
-                objTitulo.Fecha = dr.GetDateTime("Fecha Publicacion");
+                objTitulo.Fecha = dr.GetString("FechaPubicacion");
                 objTitulo.Reagalias = dr.GetString("Regalias");
 
 
@@ -160,7 +159,7 @@ namespace Libreria.Capa_Negocios
             List<clsTitulos> _lista = new List<clsTitulos>();
 
             MySqlCommand _comando = new MySqlCommand(String.Format(
-           "SELECT Tituloid, Nombre, Genero, precio, Notas, FechaPubicacion, Regalias FROM titulos where Tituloid ='{0}'", TituloId), clsTitulos.ObtenerConexion());
+           "SELECT Tituloid, Nombre, Genero, precio, Notas, FechaPubicacion, Regalias FROM titulos where Nombre ='{0}'", TituloId), clsTitulos.ObtenerConexion());
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
@@ -171,7 +170,7 @@ namespace Libreria.Capa_Negocios
                 pTitulo.Genero = _reader.GetString(2);
                 pTitulo.Precio = _reader.GetDecimal(3);
                 pTitulo.Notas = _reader.GetString(4);
-                pTitulo.Fecha = _reader.GetDateTime(5);
+                pTitulo.Fecha = _reader.GetString(5);
                 pTitulo.Reagalias = _reader.GetString(6);
 
 
@@ -195,7 +194,7 @@ namespace Libreria.Capa_Negocios
                 cli.Genero = midataReader["Genero"].ToString();
                 cli.Precio = Convert.ToDecimal(midataReader["precio"].ToString());
                 cli.Notas = midataReader["Notas"].ToString();
-                cli.Fecha = Convert.ToDateTime(midataReader["FechaPubicacion"].ToString());
+                cli.Fecha = midataReader["FechaPubicacion"].ToString();
                 cli.Reagalias = midataReader["Regalias"].ToString();
 
             }
@@ -207,6 +206,26 @@ namespace Libreria.Capa_Negocios
             miCom.Dispose();
             cnConexion.Close();
             return cli;
+        }
+
+        public void RestarInventario(clsTitulos objTitulo)
+        {
+            string sql;
+            MySqlCommand cm;
+            Conectar();
+            cm = new MySqlCommand();
+            cm.Parameters.AddWithValue("@Tituloid", objTitulo.TituloId);
+            cm.Parameters.AddWithValue("@Cantidad", objTitulo.Cantidad);
+
+            sql = "UPDATE titulos SET Cantidad = Cantidad - @Cantidad  WHERE Tituloid = @Tituloid";
+
+            cm.CommandText = sql;
+            cm.CommandType = CommandType.Text;
+            cm.Connection = cnConexion;
+            cm.ExecuteNonQuery();
+            Cerrar();
+
+
         }
     }
 }

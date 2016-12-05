@@ -13,7 +13,7 @@ namespace Libreria.Capa_Datos
         private int vIdVenta;
         private DateTime vfecha;
         private int vidTitulo;
-        private string vCantidad;
+        private int vCantidad;
 
         public int IdVenta
         {
@@ -51,7 +51,7 @@ namespace Libreria.Capa_Datos
             }
         }
 
-        public string Cantidad
+        public int Cantidad
         {
             get
             {
